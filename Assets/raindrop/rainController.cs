@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
@@ -7,26 +7,30 @@ using UnityEngine;
 public class rainController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed = 5f;
-    public float lifeTime = 5f;
+    public float fallSpeed = 6f;     // 항상 아래로 떨어지는 속도
+    public float scrollSpeed = 3f;   // → 방향키 누를 때만 적용할 옆 이동 속도(왼쪽으로라면 -로)
 
     Rigidbody2D rb;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        // �߷� ����
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
-
     }
-
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // �Ʒ��� ��������
-        rb.velocity = Vector2.down * speed;
+        Destroy(gameObject);
+    }
+    void FixedUpdate()
+    {
+        float vx = 0f;
 
-        Destroy(gameObject, lifeTime);
+        if (Input.GetKey(KeyCode.RightArrow))
+            vx = -scrollSpeed;   // 배경이 왼쪽으로 흐르는 느낌이면 - (원하는 방향대로 +/− 바꿔)
+        // else vx = 0f;  // 안 누르면 옆이동 없음
+
+        rb.velocity = new Vector2(vx, -fallSpeed);
+        // 만약 너 Unity에서 velocity 대신 linearVelocity를 쓰는 버전이면 rb.linearVelocity로 바꿔줘
     }
 }
