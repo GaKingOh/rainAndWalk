@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class backcontroler : MonoBehaviour
+public class layer1Controller : MonoBehaviour
 {
     // Start is called before the first frame update
     bool start = false;
@@ -14,7 +14,7 @@ public class backcontroler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -20) transform.position = new Vector3(15f,transform.position.y, 0f);
+        if (transform.position.x < -25) transform.position = new Vector3(15f,transform.position.y, 0f);
         if (Input.GetKeyDown(KeyCode.Space)) start = true;
 
         if(start)
