@@ -6,17 +6,18 @@ public class rainMakerController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject rainPrefab;     // 비 프리팹
-    [SerializeField] float spawnInterval = 0.2f; // 생성 간격(초)
+    [SerializeField] float spawnInterval = 0.05f; // 생성 간격(초)
     [SerializeField] float spawnY = 6f;          // 생성 Y 위치
     [SerializeField] float minX = -10f;
     [SerializeField] float maxX = 10f;
-
+    bool start;
     float timer;
-
     void Update()
     {
+        start = GameObject.Find("man").GetComponent<manController>().start;
+        Debug.Log(start);
         timer += Time.deltaTime;
-        if (timer >= spawnInterval)
+        if (timer >= spawnInterval && start)
         {
             timer = 0f;
             Spawn();

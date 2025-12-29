@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 482749778}
   - component: {fileID: 482749777}
   - component: {fileID: 482749779}
-  - component: {fileID: 482749781}
+  - component: {fileID: 482749780}
   m_Layer: 6
   m_Name: umb
   m_TagString: Untagged
@@ -201,13 +201,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482749776}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0054054214, w: 0.99998546}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1037637588}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.619}
 --- !u!60 &482749779
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -278,31 +278,45 @@ PolygonCollider2D:
       - {x: -1.28125, y: 1.90625}
       - {x: -0.75, y: 1.8125}
       - {x: -0.21875, y: 1.53125}
-      - {x: -0.1875, y: -0.5625}
-      - {x: -0.28125, y: -0.53125}
-      - {x: -0.5, y: -0.4375}
-      - {x: -0.625, y: -0.4375}
-      - {x: -0.6875, y: -0.5}
-      - {x: -0.71875, y: -0.78125}
-      - {x: -0.59375, y: -0.90625}
-      - {x: -0.5, y: -0.9375}
-      - {x: -0.25, y: -0.9375}
-      - {x: 0.0625, y: -0.625}
+      - {x: -0.28508955, y: 1.6964955}
+      - {x: -0.10272691, y: 1.7551196}
+      - {x: -0.18311226, y: 1.8341064}
+      - {x: -0.4044266, y: 1.7192495}
+      - {x: -0.4516365, y: 1.7463412}
+      - {x: -0.60806876, y: 1.7645359}
+      - {x: 0.021967053, y: 1.54744}
+      - {x: 0.3496046, y: 1.6894417}
+      - {x: -0.014253616, y: 1.5012612}
+      - {x: 0.25760078, y: 1.5048516}
       - {x: 0.0625, y: 1.5625}
   m_UseDelaunayMesh: 0
---- !u!114 &482749781
-MonoBehaviour:
+--- !u!50 &482749780
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482749776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539aa2139cc45cc4eb65c08049aa1186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitTorque: 3
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,33 +621,19 @@ Transform:
   - {fileID: 482749778}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1037637589
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &1037637589
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037637587}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c54c8b0d69c344794c1e667b567b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 180
 --- !u!1 &1077696670
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 1187669036}
   - component: {fileID: 1187669035}
   m_Layer: 0
-  m_Name: rainMaker (1)
+  m_Name: rainMaker 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -962,7 +962,7 @@ GameObject:
   - component: {fileID: 1796178561}
   - component: {fileID: 1796178560}
   m_Layer: 0
-  m_Name: rainMaker (2)
+  m_Name: rainMaker 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1111,10 +1111,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 646532285}
   - {fileID: 1077696673}
   - {fileID: 1773200406}
   - {fileID: 1017369495}
+  - {fileID: 646532285}
   - {fileID: 1187669036}
   - {fileID: 1796178561}
   - {fileID: 1037637588}

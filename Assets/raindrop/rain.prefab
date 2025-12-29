@@ -86,7 +86,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &-5998292679199276454
@@ -102,11 +102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: bce5443fe27746f45a4506226abb0631, type: 3}
-  - {fileID: 21300000, guid: 39650d4ff393dab4a8f0abcdfc305062, type: 3}
-  - {fileID: 21300000, guid: c31796067f5cfc94bb93dc1a94932688, type: 3}
-  - {fileID: 21300000, guid: 63b87708273c54047a4a86ee799dc270, type: 3}
-  - {fileID: 21300000, guid: 489736e2f14f83c49a7003356f7f4289, type: 3}
+  - {fileID: 21300000, guid: 542d64630d681bb4c9dd7c4eb820d935, type: 3}
+  - {fileID: 21300000, guid: bd7186347888cfc43b399c4a644a8e1e, type: 3}
+  - {fileID: 21300000, guid: 50c5997155432564e83fb81a24a6323f, type: 3}
+  - {fileID: 21300000, guid: a39fbe4794a315849a6eaa5ab068bc8f, type: 3}
+  - {fileID: 21300000, guid: c8453684437d6754d86f4028335bae7e, type: 3}
   scaleRange: {x: 0.9, y: 1.1}
   alphaRange: {x: 0.7, y: 1}
 --- !u!114 &-4887008097384358768
@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4dee60436c84d4a84edba12cd8d384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  lifeTime: 5
+  fallSpeed: 6
+  scrollSpeed: 3
 --- !u!61 &-7181992156521093642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
