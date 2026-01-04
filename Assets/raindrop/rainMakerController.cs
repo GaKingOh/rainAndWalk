@@ -9,7 +9,7 @@ public class rainMakerController : MonoBehaviour
     [SerializeField] float spawnInterval = 0.05f; // 생성 간격(초)
     [SerializeField] float spawnY = 6f;          // 생성 Y 위치
     [SerializeField] float minX = -10f;
-    [SerializeField] float maxX = 10f;
+    [SerializeField] float maxX = 15f;
     bool start;
     float timer;
     void Update()

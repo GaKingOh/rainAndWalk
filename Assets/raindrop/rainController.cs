@@ -20,7 +20,7 @@ public class rainController : MonoBehaviour
         rb.freezeRotation = true;
         start = GameObject.Find("man").GetComponent<manController>().start;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
     }
@@ -32,7 +32,7 @@ public class rainController : MonoBehaviour
         // else vx = 0f;  // 안 누르면 옆이동 없음
 
         rb.velocity = new Vector2(vx, -fallSpeed);
-        if (f > 10) Destroy(gameObject);
+        if (f > 5) Destroy(gameObject);
         // 만약 너 Unity에서 velocity 대신 linearVelocity를 쓰는 버전이면 rb.linearVelocity로 바꿔줘
     }
 }
