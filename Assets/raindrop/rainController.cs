@@ -13,15 +13,25 @@ public class rainController : MonoBehaviour
     Rigidbody2D rb;
     float f = 0;
     bool start;
+    hpController hp;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
         start = GameObject.Find("man").GetComponent<manController>().start;
+        hp = GameObject.Find("hp").GetComponent<hpController>(); 
+        /*
+         * Serializefield에서 받을 수 없는 변수 -> hierarchy에 있는 오브젝트/컴포넌트 불가능
+         * 
+         */
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.CompareTag("man"))
+        {
+            hp.minusHp(); 
+        }
         Destroy(gameObject);
     }
     void FixedUpdate()

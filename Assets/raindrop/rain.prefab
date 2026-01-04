@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5853149644459903455}
   - component: {fileID: 7514893410275271298}
   - component: {fileID: -5998292679199276454}
-  - component: {fileID: -4887008097384358768}
   - component: {fileID: -7181992156521093642}
   - component: {fileID: 4304763465440062149}
   - component: {fileID: 3937985359964204608}
+  - component: {fileID: -5519336218720543359}
   m_Layer: 0
   m_Name: rain
   m_TagString: Untagged
@@ -109,20 +109,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c8453684437d6754d86f4028335bae7e, type: 3}
   scaleRange: {x: 0.9, y: 1.1}
   alphaRange: {x: 0.7, y: 1}
---- !u!114 &-4887008097384358768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7639125648466670381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b4dee60436c84d4a84edba12cd8d384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 6
-  scrollSpeed: 3
 --- !u!61 &-7181992156521093642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207,3 +193,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc332b290386cc4083547af02fd8098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5519336218720543359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7639125648466670381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4dee60436c84d4a84edba12cd8d384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 6
+  scrollSpeed: 3
+  playerHp: {fileID: 0}
