@@ -14,6 +14,7 @@ public class rainMakerController : MonoBehaviour
     float timer;
     void Update()
     {
+        if (GameObject.Find("man") == null) return;
         start = GameObject.Find("man").GetComponent<manController>().start;
         timer += Time.deltaTime;
         if (timer >= spawnInterval && start)

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4304763465440062149}
   - component: {fileID: 3937985359964204608}
   - component: {fileID: -5519336218720543359}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: rain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,4 +207,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallSpeed: 6
   scrollSpeed: 3
-  playerHp: {fileID: 0}

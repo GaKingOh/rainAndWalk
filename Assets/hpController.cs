@@ -7,16 +7,28 @@ public class hpController : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] 
     int hp = 5;
-    [SerializeField]
-    public GameObject talkBox;
+    talkBoxController tpScript;
+    bool isInvincible;
     // Update is called once per frame
+    private void Awake()
+    {
+        tpScript = GameObject.Find("talkBox1").GetComponent<talkBoxController>();
+        isInvincible = GameObject.Find("man").GetComponent<invincibleController>().isInvincible;
+    }
     public void minusHp()
     {
-        if(hp > 0)
+        if(hp==0)
+        {
+            Destroy(gameObject);
+        }
+        if(hp > 0 && !isInvincible)
         {
             hp--;
-            Debug.Log("¼öÆÈ");
-            talkBox.SetActive(true);
+            if(tpScript != null)
+            {
+                tpScript.TurnOnTalkBox("¾ÆÇÁ´Ù!");
+                StartCoroutine(tpScript.DisableAfterSeconds(1.5f));
+            }
         }
     }
     void Update()
